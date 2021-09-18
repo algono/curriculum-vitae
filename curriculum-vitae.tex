@@ -9,7 +9,7 @@
 
 \usepackage{enumitem}
 
-\usepackage{fontawesome}
+\usepackage{fontawesome5}
 
 % Title (author name and rule)
 
@@ -35,13 +35,24 @@
 \newcommand{\githubpage}{\href{https://github.com/algono}{algono}}
 \newcommand{\gitlabpage}{\href{https://gitlab.com/algono}{algono}}
 
+% Iconos
+\newcommand{\iconoDireccion}{\faIcon{map-marker-alt}}
+%\newcommand{\iconoTelefono}{\faPhone}
+\newcommand{\iconoTelefono}{\faIcon{phone-alt}}
+\newcommand{\iconoEmail}{\faEnvelope}
+\newcommand{\iconoNacionalidad}{\faGlobe}
+\newcommand{\iconoFechaNacimiento}{\faBirthdayCake}
+\newcommand{\iconoDni}{\faIdCard}
+\newcommand{\iconoGitHub}{\faGithub}
+\newcommand{\iconoGitLab}{\faGitlab}
+
 \newcommand{\contactinfo}{
     \begin{minipage}[c]{.7\textwidth}
         \begin{large}
             \begin{enumerate}[labelsep=.5em,itemsep=12pt]
-                \item [\faEnvelope] \email
-                \item [\faGithub] \githubpage
-                \item [\faGitlab] \gitlabpage
+                \item [\iconoEmail] \email
+                \item [\iconoGitHub] \githubpage
+                \item [\iconoGitLab] \gitlabpage
             \end{enumerate}
         \end{large}
     \end{minipage}
