@@ -63,10 +63,13 @@
             \iconoGitHub \hspace{.5em} \githubpage \hspace{1em} \iconoGitLab \hspace{.5em} \gitlabpage
         \end{large}
     \end{minipage}
+    \begin{center}
+    Alejandro Gómez es un \textbf{Ingeniero Software},\\\textbf{recién licenciado} en el Grado de \textbf{Ingeniería Informática}\\ por la {\uni[\bfseries]} (2021).
+    \end{center}
 }
 
 % Other info
-\newcommand{\uni}{\emph{Universitat Politècnica de València (UPV)}}
+\newcommand{\uni}[1][]{\emph{Universitat Politècnica de València ({#1UPV})}}
 
 \newcommand{\fce}{\emph{First Certificate in English - Cambridge}}
 
@@ -85,7 +88,7 @@
         \begin{center}
             \vspace{.7em}
 
-            \textbf{Mis notas}
+            \textbf{Expediente}
     
             \begin{enumerate}[left=1em,
                 label=\arabic*\textdegree curso:]
@@ -118,48 +121,6 @@
     {8,4}
     {2}
     {9 (Excelente)}
-}
-
-\newcommand{\highschoolgrades}[4]{
-    
-    \fbox{\begin{minipage}{20em}
-        \begin{center}
-            \vspace{.7em}
-
-            \textbf{Mis notas medias}
-
-            \vspace{.7em}
-
-            ESO
-
-            \begin{enumerate}
-                \centering 
-                \item[4\textdegree:] #1
-            \end{enumerate}
-
-            Bachillerato
-
-            \begin{enumerate}[
-                label=\arabic*\textdegree:]
-                \centering
-                
-                \item #2
-                \item #3
-                \item[Media:] #4
-            \end{enumerate}
-
-            \vspace{.1em}
-        \end{center}
-    \end{minipage}}
-    
-}
-
-\newcommand{\myhighschoolgrades}{
-    \highschoolgrades
-    {9,64}
-    {9,5}
-    {8,86}
-    {9,18}
 }
 
 \begin{document}
@@ -199,19 +160,15 @@
 
     Trello \faTrello, Amazon Alexa \faAmazon
 
+    \pagebreak
+
     \section{Estudios}
-
-    \subsection{Secundaria y Bachillerato}
-
-    \myhighschoolgrades
 
     \subsection{Campus Científicos - 2015}
 
     Durante el verano de 2015, participé en los \href{https://www.campuscientificos.es/}{Campus Científicos} (organizados por la FECYT y el ministerio de Educación), cursando el proyecto de "Seguridad en Redes e Internet" en la universidad Carlos III de Madrid.
 
     \subsection{Universidad}
-
-    Me gradué en el Grado de Ingeniería Informática de la {\uni} en el año 2021.\\
 
     \myunigrades
 
