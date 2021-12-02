@@ -11,19 +11,17 @@
 
 \usepackage{fontawesome5}
 
+\usepackage{tikz}
+
 % Title (author name and rule)
 
 \newcommand{\name}{
-    {\huge\bfseries\MakeUppercase{\theauthor}}
-
-    \rule{.65\textwidth}{.4pt}
+    {\Large\bfseries\MakeUppercase{\theauthor}}
 }
 
 \renewcommand{\maketitle}{
     \begin{center}
-
         \name
-
     \end{center}
 }
 
@@ -32,6 +30,7 @@
 \newcommand{\emailnoref}{alejandrogomeznoe@gmail.com}
 \newcommand{\email}{\href{mailto:\emailnoref}{\emailnoref}}
 
+\newcommand{\linkedinpage}{\href{https://www.linkedin.com/in/alejandro-g\%C3\%B3mez-bb4239224/}{Alejandro Gómez}}
 \newcommand{\githubpage}{\href{https://github.com/algono}{algono}}
 \newcommand{\gitlabpage}{\href{https://gitlab.com/algono}{algono}}
 
@@ -45,19 +44,24 @@
 \newcommand{\iconoDni}{\faIdCard}
 \newcommand{\iconoGitHub}{\faGithub}
 \newcommand{\iconoGitLab}{\faGitlab}
+\newcommand{\iconoLinkedin}{\faLinkedin}
 
 \newcommand{\contactinfo}{
-    \begin{minipage}[c]{.7\textwidth}
-        \begin{large}
-            \begin{enumerate}[labelsep=.5em,itemsep=12pt]
-                \item [\iconoEmail] \email
-                \item [\iconoGitHub] \githubpage
-                \item [\iconoGitLab] \gitlabpage
-            \end{enumerate}
-        \end{large}
+    \begin{minipage}[l]{.25\textwidth}
+        \begin{tikzpicture}
+        \clip (0,0) circle (2cm) ;
+        \node[anchor=center] at (0,0) {\includegraphics[width=4cm,height=4cm,keepaspectratio]{mi-foto.jpg}};
+        \end{tikzpicture}
     \end{minipage}
-    \begin{minipage}[r]{.2\textwidth}
-        \includegraphics[width=4cm,height=4cm,keepaspectratio]{mi-foto.jpg}
+    \begin{minipage}[r]{.6\textwidth}
+        \begin{large}
+            \iconoEmail \hspace{.5em} \email \par
+            \vspace{12pt}
+            \iconoDireccion \hspace{.5em} Mislata, Valencia \par
+            \vspace{12pt}
+            \iconoLinkedin \hspace{.5em} \linkedinpage \hspace{1em}
+            \iconoGitHub \hspace{.5em} \githubpage \hspace{1em} \iconoGitLab \hspace{.5em} \gitlabpage
+        \end{large}
     \end{minipage}
 }
 
@@ -164,8 +168,6 @@
     \author{Alejandro Gómez Noé}
     
     \maketitle
-
-    \vspace{12pt}
 
     \contactinfo
 
