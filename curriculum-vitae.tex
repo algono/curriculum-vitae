@@ -15,6 +15,8 @@
 
 \usepackage{svg}
 
+\usepackage{array}
+
 % Title (author name and rule)
 
 \newcommand{\name}{
@@ -77,39 +79,23 @@
 
 % My Grades
 
-\newcommand{\gradesinyear}[2]{
-    \begin{itemize}
-        \item Nota media: #1
-        \item Matrículas de honor: #2
-    \end{itemize}
-}
+\newcommand{\grade}[1]{Nota media: #1}
+\newcommand{\mh}[1]{Matrículas de honor: #1}
+
+% https://tex.stackexchange.com/questions/150492/how-to-use-i\rule{0pt}{1em}ize-in-table-environment
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
 
 \newcommand{\unigrades}[9]{
-
-    \fbox{\begin{minipage}{20em}
-        \begin{center}
-            \vspace{.7em}
-
-            \textbf{Expediente}
-    
-            \begin{enumerate}[left=1em,
-                label=\arabic*\textdegree curso:]
-                \item
-                    \gradesinyear{#1}{#2}
-                \item
-                    \gradesinyear{#3}{#4}
-                \item
-                    \gradesinyear{#5}{#6}
-                \item
-                    \gradesinyear{#7}{#8}
-            \end{enumerate}
-
-            Nota final (TFG): #9
-
-            \vspace{.1em}
-        \end{center}
-    \end{minipage}}
-    
+    \begin{tabular}{|ll<{\hspace{1em}}|>{\hspace{1em}}ll|}
+        \hline
+        \multicolumn{4}{|c|}{\textbf{Expediente}}\\[.5em]
+        1er curso: & \tabitem \grade{#1} & 2{\textdegree} curso: & \tabitem \grade{#3} \\
+        & \tabitem \mh{#2} && \tabitem \mh{#4} \\
+        3er curso: & \tabitem \grade{#5} & 4{\textdegree} curso: & \tabitem \grade{#7} \\
+        & \tabitem \mh{#6} && \tabitem \mh{#8} \\
+        \multicolumn{4}{|c|}{\rule{0pt}{1.5em}Nota final (TFG): #9}\\
+        \hline
+    \end{tabular}
 }
 
 \newcommand{\myunigrades}{
