@@ -67,7 +67,7 @@ Idiomas
 
 -   Español, nativo
 
--   Valenciano, nivel A1 (sin certificado)
+-   Valenciano, nivel B1
 
 -   Inglés, nivel B2 (*First Certificate in English - Cambridge*)
 
