@@ -13,6 +13,8 @@
 
 \usepackage{tikz}
 
+\usepackage{changepage} % for adjustwidth environment
+
 \usepackage{svg}
 
 \usepackage{array}
@@ -93,14 +95,14 @@
         }
     \end{minipage}
     \begin{center}
-    Alejandro Gómez es un \textbf{Ingeniero Software},\\\textbf{recién titulado} en el Grado de \textbf{Ingeniería Informática}\\ por la \textbf{\uni} (2021).
+    Alejandro Gómez es un \textbf{Ingeniero Informático}\\ especializado en \textbf{Ingeniería del Software},\\actualmente \textbf{trabajando} en el grupo de investigación \textbf{ITACA-SABIEN}\\ de la \textbf{\uni}.
     \end{center}
 }
 
 % Other info
 \newcommand{\uni}{Universitat Politècnica de València (UPV)}
 
-\newcommand{\fce}{\emph{First Certificate in English - Cambridge - Grade A}}
+\newcommand{\fce}{\emph{First Certificate in English - Grade A - Cambridge English Level 2}}
 
 % My Grades
 
@@ -137,141 +139,208 @@
 }
 
 \begin{document}
-    
-    \title{Curriculum Vitae}
-    \author{Alejandro Gómez Noé}
-    
-    \maketitle
 
-    \contactinfo
+\title{Curriculum Vitae}
+\author{Alejandro Gómez Noé}
 
-    \vspace{8pt}
+\maketitle
 
-    \rule{.9\textwidth}{.4pt}
+\contactinfo
 
-    \section{Conocimientos}
+\vspace{8pt}
 
-    \renewcommand{\arraystretch}{1.7}
-    \begin{LARGE}
-    \begin{tabular}{ll<{\hspace{1em}}|>{\hspace{1em}}l}
-        \multicolumn{2}{c}{\Large{\textbf{\textcolor{OliveGreen}{Lenguajes}}}} & \Large{\textbf{\textcolor{RawSienna}{Tecnologías}}}\\[.5ex]
-        \raisebox{-.12em}{\includesvg[scale=1.3]{csharp.svg}} C\# & \textcolor[HTML]{A5630B}{\faCoffee} \hspace{.1em} Java & \textcolor[HTML]{339933}{\faIcon{node-js}} Node.js\\
-        \includesvg[scale=1.2]{typescript.svg} TypeScript & \textcolor[HTML]{F7DF1E}{\faJs} \hspace{.1em} JavaScript & \textcolor[HTML]{F05032}{\faIcon{git-alt}} Git\\
-        \includesvg[scale=1.15]{dart.svg} Dart & \faDatabase \hspace{.1em} SQL & \iconoGitHub \hspace{.1em} GitHub\\
-        \faPython \hspace{.1em} Python & \faLinux \hspace{.1em} Bash & \includesvg[scale=1.2]{firebase.svg} Firebase\\
-        \includesvg[scale=1.3]{haskell.svg} Haskell & \faMarkdown \hspace{.1em} Markdown & \includesvg[scale=1.1]{flutter.svg} Flutter\\
-        \LaTeX && \faUnity \hspace{.1pt} Unity\\\cline{1-2}
-        \multicolumn{2}{c|}{\Large{\textbf{\textcolor{RoyalPurple}{Herramientas}}}} & \textcolor[HTML]{0078D6}{\faWindows} \hspace{.1em} WPF\\
-        \includesvg[scale=1.1]{vscode.svg} VSCode & \textcolor[HTML]{0052CC}{\faTrello} \hspace{.1em} Trello & \textcolor[HTML]{2496ED}{\faDocker} \hspace{.1em} Docker\\
-        \includesvg[scale=1.1]{visual-studio.svg} Visual Studio & \includesvg{sonarqube.svg} Sonarqube & \includesvg[scale=1.2]{alexa.svg} Alexa\\
-    \end{tabular}
-    \end{LARGE}
-    
-    \pagebreak
+\rule{.9\textwidth}{.4pt}
 
-    \section{Experiencia}
+\section{Conocimientos}
 
-    \begin{center}
-        \large{\textbf{Al Loro - Desarrollador principal}}\par
-        \vspace{.2em}
-        \href{https://github.com/algono/FeedTheParrot-RSS}{Repositorio}\hspace{1em}\href{http://hdl.handle.net/10251/174256}{Memoria}
-    \end{center}
-    \begin{itemize}
-        \item Implementé en solitario una \textbf{skill} para Amazon \textbf{Alexa} como Trabajo de Fin de Grado (\textbf{TFG}), usando \textbf{Node.js} y \textbf{TypeScript}.
-        \item Integré la skill con una \textbf{base de datos} en \textbf{Firebase}, creando además una app con \textbf{Flutter} para gestionar las preferencias del usuario.
-        \item Diseñé un sistema de autenticación usando servicios de \textbf{AWS} como \textbf{Lambda}, \textbf{DynamoDB} o \textbf{API Gateway}.
-    \end{itemize}
-    \rule{\textwidth}{.4pt}
+\vspace{.8em}
 
-    \vspace{.5em}
+\begin{adjustwidth}{-1.5cm}{}
+    \begin{tikzpicture}
 
-    Los siguientes proyectos participaron en la \href{https://es-es.facebook.com/etsinf/videos/feria-de-proyectos-de-estudiantes-2019/1921312964681641/}{\textbf{Feria de proyectos} (2019)} que organizó la \emph{ETSINF}:
+        % Define the styles for the circles
+        \tikzset{
+            skill/.style={
+                    align=center,
+                    inner sep=0pt,
+                    font=\bfseries
+                },
+            skill-circle/.style={
+                    circle,
+                    draw,
+                    text width=2cm,
+                    align=center,
+                    inner sep=0pt,
+                    font=\bfseries
+                },
+            category/.style={
+                    circle,
+                    draw,
+                    text width=7cm,
+                    minimum height=3cm,
+                    align=center,
+                    text depth=7cm,
+                    font=\bfseries
+                },
+            subcategory/.style={
+                    circle,
+                    draw,
+                    dashed,
+                    text width=5cm,
+                    minimum height=3cm,
+                    align=center,
+                    text depth=5cm,
+                    font=\bfseries
+                }
+        }
 
-    \vspace{.3em}
+        % Draw the categories
+        \node[category] (web) at (-5,0) {Desarrollo Web};
+        \node[category] (desktop) at (5,0) {Aplicaciones de Escritorio};
+        \node[category] (tools) at (0,-10) {Herramientas};
+        \node[subcategory] (dotnet) at (0.5,3) {.NET};
 
-    \begin{center}
-        \large{\textbf{Transportify - Desarrollador Jefe}}\par
-        \vspace{.2em}
-        \href{https://github.com/Mobility-Solutions/Transportify}{Repositorio}
-    \end{center}
-    \begin{itemize}
-        \item Lideré un equipo de 8 personas en la creación de una app con \textbf{Flutter} para la asignatura \emph{PIN}.
-        \item Desarrollé una serie de componentes para facilitar la integración de la app con la base de datos, diseñada en \textbf{Firebase}.
-        \item Gestioné el proyecto mediante \textbf{metodologías ágiles} a través de la plataforma \href{http://www.tuneupprocess.com/}{\textbf{\emph{Worki}}}, desarrollada por nuestro profesor; además del sistema de control de versiones en \textbf{GitHub}, tratando de seguir un flujo de trabajo basado en \textbf{Git flow}.
-    \end{itemize}
-    \vspace{1em}
-    \begin{center}
-        \large{\textbf{Frozen Out - Desarrollador}}\par
-        \vspace{.2em}
-        \href{https://github.com/Mobility-Solutions/Transportify}{Repositorio}
-    \end{center}
-    \begin{itemize}
-        \item Participé en el desarrollo de un videojuego hecho en \textbf{Unity} con \textbf{C\#} como proyecto para la asignatura \emph{IPV}.
-        \item Diseñé un \textbf{sistema de diálogos} con soporte para formatos como negrita, cursiva, y distintos colores apoyándome en la librería \href{https://yarnspinner.dev/}{\textbf{\emph{YarnSpinner}}}.
-        \item El proyecto continuó sin mí tras la entrega final de la asignatura (Enero de 2020). En Febrero de 2021, \emph{Frozen Out} recibió el \textbf{Premio Especial Compromiso PlayStation} (\href{https://www.inf.upv.es/www/etsinf/es/premio-especial-compromiso-playstation-para-el-videojuego-frozen-out-creado-por-estudiantes-de-la-etsinf-y-la-facultat-de-bb-aa/}{artículo}).
-    \end{itemize}
-    \rule{\textwidth}{.4pt}
+        % Draw the skills within the categories
+        \node[skill] (html) at (-8,1.5) {{\fontsize{30pt}{30pt}\faHtml5}\\\textbf{HTML}};
+        \node[skill] (css) at (-5.5,1.5) {{\fontsize{30pt}{30pt}\faCss3*}\\\textbf{CSS}};
+        \node[skill] (js) at (-3.5,-0.2) {{\fontsize{30pt}{30pt}\faJs}\\\textbf{JavaScript}};
+        \node[skill] (php) at (-6.25,-0.75) {\fontsize{40pt}{40pt}\faPhp};
+        \node[skill,text width=2.5cm] (wordpress) at (-8.5,-1.5) {{\fontsize{30pt}{30pt}\faWordpress}\\\textbf{WordPress}};
+        \node[skill] (elementor) at (-6,-3.2) {{\fontsize{30pt}{30pt}\faElementor}\\\textbf{Elementor}};
+        \node[skill] (csharp) at (0,4) {\includesvg[scale=1.3]{csharp.svg}};
+        \node[skill-circle] (wpf) at (1.3,1) {WPF};
+        \node[skill, font=\normalsize] (unity) at (3.1,2.1) {{\fontsize{30pt}{30pt}\faUnity}\\\textbf{Unity}};
+        \node[skill-circle, text width=2.3cm] (aspnetcore) at (-1.5,1.5) {ASP.NET Core};
+        \node[skill] (git) at (-1,-8) {{\fontsize{30pt}{30pt}\faGit}};
+        \node[skill] (github) at (1,-8) {{\fontsize{30pt}{30pt}\faGithub}\\GitHub};
+        \node[skill] (vscode) at (-1.5,-10.5) {{\fontsize{30pt}{30pt}\includesvg[scale=1.1]{visual-studio.svg}}\\Visual Studio};
+        \node[skill] (vscode) at (1.5,-10.5) {{\fontsize{30pt}{30pt}\includesvg[scale=1.1]{vscode.svg}}\\VS Code};
+        \node[skill] (trello) at (0,-13) {{\fontsize{30pt}{30pt}\faTrello}\\Trello};
+    \end{tikzpicture}
+\end{adjustwidth}
 
-    \pagebreak
+%\renewcommand{\arraystretch}{1.5}
+%\begin{LARGE}
+%    \begin{tabular}{ll<{\hspace{1em}}|>{\hspace{1em}}l}
+%        \multicolumn{2}{c}{\Large{\textbf{\textcolor{OliveGreen}{Lenguajes}}}}      & \Large{\textbf{\textcolor{RawSienna}{Tecnologías}}}                                                                 \\[.5ex]
+%        \raisebox{-.12em}{\includesvg[scale=1.3]{csharp.svg}} C\#                   & \textcolor[HTML]{A5630B}{\faCoffee} \hspace{.1em} Java   & \textcolor[HTML]{339933}{\faIcon{node-js}} Node.js       \\
+%        \includesvg[scale=1.2]{typescript.svg} TypeScript                           & \textcolor[HTML]{F7DF1E}{\faJs} \hspace{.1em} JavaScript & \textcolor[HTML]{F05032}{\faIcon{git-alt}} Git           \\
+%        \includesvg[scale=1.15]{dart.svg} Dart                                      & \faDatabase \hspace{.1em} SQL                            & \iconoGitHub \hspace{.1em} GitHub                        \\
+%        \faPython \hspace{.1em} Python                                              & \faLinux \hspace{.1em} Bash                              & \includesvg[scale=1.2]{firebase.svg} Firebase            \\
+%        \faIcon{php} PHP                                                            & \LaTeX                                                   & \includesvg[scale=1.1]{flutter.svg} Flutter              \\
+%                                                                                    &                                                          & \faUnity \hspace{.1pt} Unity                             \\\cline{1-2}
+%        \multicolumn{2}{c|}{\Large{\textbf{\textcolor{RoyalPurple}{Herramientas}}}} & \textcolor[HTML]{0078D6}{\faWindows} \hspace{.1em} WPF                                                              \\
+%        \includesvg[scale=1.1]{vscode.svg} VSCode                                   & \textcolor[HTML]{0052CC}{\faTrello} \hspace{.1em} Trello & \textcolor[HTML]{2496ED}{\faDocker} \hspace{.1em} Docker \\
+%        \includesvg[scale=1.1]{visual-studio.svg} Visual Studio                     & \includesvg{sonarqube.svg} Sonarqube                     & \includesvg[scale=1.2]{alexa.svg} Alexa                  \\
+%    \end{tabular}
+%\end{LARGE}
 
-    \begin{center}
-        \large{\textbf{CLIPS IDE - Desarrollador principal}}\par
-        \vspace{.2em}
-        \href{https://marketplace.visualstudio.com/items?itemName=algono.clips-ide}{Página web}
-        \hspace{1em}\href{https://github.com/algono/clips-ide-vscode}{Repositorio}
-    \end{center}
-    \begin{itemize}
-        \item Diseñé por cuenta propia una \textbf{extensión} para el editor de código \textbf{Visual Studio Code}, utilizando \textbf{Node.js} y \textbf{TypeScript}.
-        \item Este complemento añade \textbf{soporte} para el lenguaje de programación \textbf{CLIPS}; incluyendo un \textbf{\emph{REPL}} (un "<entorno de programación interactiva">\footnote{\url{https://es.wikipedia.org/wiki/REPL}} basado en un terminal), además de otras ventanas con información útil para programar en dicho lenguaje.
-        
-        Esto aporta una experiencia similar a un \textbf{\emph{IDE}} (entorno de desarrollo integrado).
+\pagebreak
 
-        \includegraphics[width=.9415\textwidth]{vscode-clips-ide.png}
+\section{Experiencia}
 
-        \item La idea surgió gracias a que me enseñaron este lenguaje en la asignatura \emph{SIN} de 3er año en el grado.
-        
-        Intentando encontrar aplicaciones que me habría gustado tener mientras estudiaba, recordé el lenguaje \emph{CLIPS}, y cómo me habría gustado que tuviera soporte para mi principal editor de código.
-        \item En los \textbf{primeros 4 meses}, la extensión ha sido \textbf{instalada más de 600 veces}, y ha recibido una \textbf{valoración de 5 estrellas} (sobre 5).
-    \end{itemize}
+\begin{center}
+    \large{\textbf{Al Loro - Desarrollador principal}}\par
+    \vspace{.2em}
+    \href{https://github.com/algono/FeedTheParrot-RSS}{Repositorio}\hspace{1em}\href{http://hdl.handle.net/10251/174256}{Memoria}
+\end{center}
+\begin{itemize}
+    \item Implementé en solitario una \textbf{skill} para Amazon \textbf{Alexa} como Trabajo de Fin de Grado (\textbf{TFG}), usando \textbf{Node.js} y \textbf{TypeScript}.
+    \item Integré la skill con una \textbf{base de datos} en \textbf{Firebase}, creando además una app con \textbf{Flutter} para gestionar las preferencias del usuario.
+    \item Diseñé un sistema de autenticación usando servicios de \textbf{AWS} como \textbf{Lambda}, \textbf{DynamoDB} o \textbf{API Gateway}.
+\end{itemize}
+\rule{\textwidth}{.4pt}
 
-    \subsection{Otros proyectos}
+\vspace{.5em}
 
-    \begin{itemize}
-        \item \textbf{London Eye} (\href{https://github.com/algono/London-Eye}{repositorio}): Videojuego hecho en \textbf{Unity} con \textbf{C\#} en 3 semanas para la asignatura \emph{EDV}. En este juego mejoré el sistema de diálogos que hice para \emph{Frozen Out}.
-        \item \textbf{Acceso UPV} (\href{https://github.com/algono/AccesoUPV}{repositorio}): Aplicación de escritorio para Windows, diseñada para acceder fácilmente a varios servicios de la UPV (VPN, Disco W, etc). Hecha en \textbf{C\#} con \textbf{WPF}. 
-    \end{itemize}
+Los siguientes proyectos participaron en la \href{https://es-es.facebook.com/etsinf/videos/feria-de-proyectos-de-estudiantes-2019/1921312964681641/}{\textbf{Feria de proyectos} (2019)} que organizó la \emph{ETSINF}:
 
-    \section{Educación}
+\vspace{.3em}
 
-    \subsection{Campus Científicos - 2015}
+\begin{center}
+    \large{\textbf{Transportify - Desarrollador Jefe}}\par
+    \vspace{.2em}
+    \href{https://github.com/Mobility-Solutions/Transportify}{Repositorio}
+\end{center}
+\begin{itemize}
+    \item Lideré un equipo de 8 personas en la creación de una app con \textbf{Flutter} para la asignatura \emph{PIN}.
+    \item Desarrollé una serie de componentes para facilitar la integración de la app con la base de datos, diseñada en \textbf{Firebase}.
+    \item Gestioné el proyecto mediante \textbf{metodologías ágiles} a través de la plataforma \href{http://www.tuneupprocess.com/}{\textbf{\emph{Worki}}}, desarrollada por nuestro profesor; además del sistema de control de versiones en \textbf{GitHub}, tratando de seguir un flujo de trabajo basado en \textbf{Git flow}.
+\end{itemize}
+\vspace{1em}
+\begin{center}
+    \large{\textbf{Frozen Out - Desarrollador}}\par
+    \vspace{.2em}
+    \href{https://github.com/Mobility-Solutions/Transportify}{Repositorio}
+\end{center}
+\begin{itemize}
+    \item Participé en el desarrollo de un videojuego hecho en \textbf{Unity} con \textbf{C\#} como proyecto para la asignatura \emph{IPV}.
+    \item Diseñé un \textbf{sistema de diálogos} con soporte para formatos como negrita, cursiva, y distintos colores apoyándome en la librería \href{https://yarnspinner.dev/}{\textbf{\emph{YarnSpinner}}}.
+    \item El proyecto continuó sin mí tras la entrega final de la asignatura (Enero de 2020). En Febrero de 2021, \emph{Frozen Out} recibió el \textbf{Premio Especial Compromiso PlayStation} (\href{https://www.inf.upv.es/www/etsinf/es/premio-especial-compromiso-playstation-para-el-videojuego-frozen-out-creado-por-estudiantes-de-la-etsinf-y-la-facultat-de-bb-aa/}{artículo}).
+\end{itemize}
+\rule{\textwidth}{.4pt}
 
-    Durante el verano de 2015, participé en los \href{https://www.campuscientificos.es/}{Campus Científicos} (organizados por la FECYT y el ministerio de Educación), cursando el proyecto de ``Seguridad en Redes e Internet'' en la universidad Carlos III de Madrid.
+\pagebreak
 
-    \subsection{Universidad}
+\begin{center}
+    \large{\textbf{CLIPS IDE - Desarrollador principal}}\par
+    \vspace{.2em}
+    \href{https://marketplace.visualstudio.com/items?itemName=algono.clips-ide}{Página web}
+    \hspace{1em}\href{https://github.com/algono/clips-ide-vscode}{Repositorio}
+\end{center}
+\begin{itemize}
+    \item Diseñé por cuenta propia una \textbf{extensión} para el editor de código \textbf{Visual Studio Code}, utilizando \textbf{Node.js} y \textbf{TypeScript}.
+    \item Este complemento añade \textbf{soporte} para el lenguaje de programación \textbf{CLIPS}; incluyendo un \textbf{\emph{REPL}} (un "<entorno de programación interactiva">\footnote{\url{https://es.wikipedia.org/wiki/REPL}} basado en un terminal), además de otras ventanas con información útil para programar en dicho lenguaje.
 
-    {\uni}\\
-    Grado en Ingeniería Informática, 2021\\
+          Esto aporta una experiencia similar a un \textbf{\emph{IDE}} (entorno de desarrollo integrado).
 
-    \myunigrades
+          \includegraphics[width=.9415\textwidth]{vscode-clips-ide.png}
 
-    \section{Idiomas}
+    \item La idea surgió gracias a que me enseñaron este lenguaje en la asignatura \emph{SIN} de 3er año en el grado.
 
-    \begin{itemize}
-        \item \textbf{Español}, nativo
-        \item \textbf{Inglés}, nivel \textbf{C1} (\fce)
-        \item Valenciano, nivel B1
-    \end{itemize}
+          Intentando encontrar aplicaciones que me habría gustado tener mientras estudiaba, recordé el lenguaje \emph{CLIPS}, y cómo me habría gustado que tuviera soporte para mi principal editor de código.
+    \item En los \textbf{primeros 4 meses}, la extensión ha sido \textbf{instalada más de 600 veces}, y ha recibido una \textbf{valoración de 5 estrellas} (sobre 5).
+\end{itemize}
 
-    \section{Actividades}
+\subsection{Otros proyectos}
 
-    \subsection{Mentor - Technovation Challenge}
+\begin{itemize}
+    \item \textbf{London Eye} (\href{https://github.com/algono/London-Eye}{repositorio}): Videojuego hecho en \textbf{Unity} con \textbf{C\#} en 3 semanas para la asignatura \emph{EDV}. En este juego mejoré el sistema de diálogos que hice para \emph{Frozen Out}.
+    \item \textbf{Acceso UPV} (\href{https://github.com/algono/AccesoUPV}{repositorio}): Aplicación de escritorio para Windows, diseñada para acceder fácilmente a varios servicios de la UPV (VPN, Disco W, etc). Hecha en \textbf{C\#} con \textbf{WPF}.
+\end{itemize}
 
-    Participé como mentor voluntario en el concurso de Iridescent \href{https://technovationchallenge.org/}{Technovation Challenge} en su edición del año 2019, en colaboración con el \href{https://cdl.upv.es/american-space}{American Space}, una asociación de la \emph{\uni}.
+\section{Educación}
 
-    \section{Otros}
+\subsection{Universidad}
 
-    \begin{itemize}
-        \item Carnet de conducir (tipo B).
-    \end{itemize}
+{\uni}
+
+Grado en Ingeniería Informática, 2021
+
+Mención en Ingeniería del Software
+
+\subsection{Campus Científicos - 2015}
+
+Durante el verano de 2015, participé en los \href{https://www.campuscientificos.es/}{Campus Científicos} (organizados por la FECYT y el ministerio de Educación), cursando el proyecto de ``Seguridad en Redes e Internet'' en la universidad Carlos III de Madrid.
+
+\section{Idiomas}
+
+\begin{itemize}
+    \item \textbf{Español}, nativo
+    \item \textbf{Inglés}, nivel \textbf{C1} (\fce)
+    \item Valenciano, nivel B1
+\end{itemize}
+
+\section{Actividades}
+
+\subsection{Mentor - Technovation Challenge}
+
+Participé como mentor voluntario en el concurso de Iridescent \href{https://technovationchallenge.org/}{Technovation Challenge} en su edición del año 2019, en colaboración con el \href{https://cdl.upv.es/american-space}{American Space}, una asociación de la \emph{\uni}.
+
+\section{Otros}
+
+\begin{itemize}
+    \item Carnet de conducir (tipo B).
+\end{itemize}
 
 \end{document}

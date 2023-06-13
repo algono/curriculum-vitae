@@ -32,7 +32,7 @@ HTML 5, CSS 3, XML, RSS , Markdown , LaTeX
 Frameworks
 ----------
 
-NodeJS , Android (Java) , Flutter , Unity , Drupal
+NodeJS , Android (Java) , Flutter , Unity , WordPress
 
 Otros
 -----
