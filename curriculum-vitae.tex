@@ -95,12 +95,17 @@
         }
     \end{minipage}
     \begin{center}
-    Alejandro Gómez es un \textbf{Ingeniero Informático}\\ especializado en \textbf{Ingeniería del Software},\\actualmente \textbf{trabajando} en el grupo de investigación \textbf{ITACA-SABIEN}\\ de la \textbf{\uni}.
+    Alejandro Gómez es un \textbf{Ingeniero Informático}\\ especializado en \textbf{Ingeniería del Software},\\actualmente \textbf{trabajando} en el grupo de investigación \textbf{\href{\sabienUrl}{ITACA-SABIEN}}\\ de la \textbf{\href{\uniUrl}{\uni}}.
     \end{center}
 }
 
 % Other info
-\newcommand{\uni}{Universitat Politècnica de València (UPV)}
+\newcommand{\uni}{{\uniFull} ({\uniShort})}
+\newcommand{\uniFull}{Universitat Politècnica de València}
+\newcommand{\uniShort}{UPV}
+\newcommand{\uniUrl}{https://www.upv.es/es}
+
+\newcommand{\sabienUrl}{http://www.sabien.upv.es/}
 
 \newcommand{\fce}{\emph{First Certificate in English - Grade A - Cambridge English Level 2}}
 
@@ -253,6 +258,37 @@
 
 \section{Experiencia}
 
+\subsection{Técnico medio | ITACA-SABIEN (UPV) | 2022 - presente}
+
+Como \textbf{técnico medio en informática} en el grupo \emph{\textbf{\href{\sabienUrl}{SABIEN}} (Innovaciones Tecnológicas para la Salud y el Bienestar)} del \emph{Instituto de Aplicaciones de las Tecnologías de la Información y de las Comunicaciones Avanzadas (\textbf{\href{http://www.itaca.upv.es/}{ITACA}})} de la \emph{{\uniFull} (\textbf{\href{\uniUrl}{UPV}})}, mi trabajo consiste en el desarrollo de aplicaciones y el apoyo informático de distinta índole en el marco de diversos proyectos de investigación.
+
+\subsubsection{Proyectos en los que he participado}
+
+\begin{itemize}
+    \item \textbf{\href{https://orriolsarrandeterra.com/}{Orriols Arran de Terra}}: Página web destinada a la difusión de noticias y actividades del barrio de Els Orriols (Valencia)
+    \item \textbf{\href{https://www.sabien.upv.es/project/value/}{VALUE}}: Uso de técnicas de \emph{Process Mining} (minería de procesos) para la mejora de la eficiencia en la gestión de la información en el sector de la salud
+    \item \textbf{\href{http://www.sabien.upv.es/project/dial/}{DIAL}}: Tecnologías Asistivas de Voz Multiplataforma para la detección y abordaje de Soledad No Deseada en personas mayores
+\end{itemize}
+
+\pagebreak
+
+\section{Educación}
+
+\subsection{Universidad}
+
+\fbox{
+    \large
+    \begin{minipage}{.6\textwidth}
+        Grado en Ingeniería Informática
+
+        Mención en Ingeniería del Software
+
+            {\uni}, 2021
+    \end{minipage}
+}
+
+\subsubsection{Proyectos de asignaturas}
+
 \begin{center}
     \large{\textbf{Al Loro - Desarrollador principal}}\par
     \vspace{.2em}
@@ -293,45 +329,6 @@ Los siguientes proyectos participaron en la \href{https://es-es.facebook.com/ets
     \item El proyecto continuó sin mí tras la entrega final de la asignatura (Enero de 2020). En Febrero de 2021, \emph{Frozen Out} recibió el \textbf{Premio Especial Compromiso PlayStation} (\href{https://www.inf.upv.es/www/etsinf/es/premio-especial-compromiso-playstation-para-el-videojuego-frozen-out-creado-por-estudiantes-de-la-etsinf-y-la-facultat-de-bb-aa/}{artículo}).
 \end{itemize}
 \rule{\textwidth}{.4pt}
-
-\pagebreak
-
-\begin{center}
-    \large{\textbf{CLIPS IDE - Desarrollador principal}}\par
-    \vspace{.2em}
-    \href{https://marketplace.visualstudio.com/items?itemName=algono.clips-ide}{Página web}
-    \hspace{1em}\href{https://github.com/algono/clips-ide-vscode}{Repositorio}
-\end{center}
-\begin{itemize}
-    \item Diseñé por cuenta propia una \textbf{extensión} para el editor de código \textbf{Visual Studio Code}, utilizando \textbf{Node.js} y \textbf{TypeScript}.
-    \item Este complemento añade \textbf{soporte} para el lenguaje de programación \textbf{CLIPS}; incluyendo un \textbf{\emph{REPL}} (un "<entorno de programación interactiva">\footnote{\url{https://es.wikipedia.org/wiki/REPL}} basado en un terminal), además de otras ventanas con información útil para programar en dicho lenguaje.
-
-          Esto aporta una experiencia similar a un \textbf{\emph{IDE}} (entorno de desarrollo integrado).
-
-          \includegraphics[width=.9415\textwidth]{vscode-clips-ide.png}
-
-    \item La idea surgió gracias a que me enseñaron este lenguaje en la asignatura \emph{SIN} de 3er año en el grado.
-
-          Intentando encontrar aplicaciones que me habría gustado tener mientras estudiaba, recordé el lenguaje \emph{CLIPS}, y cómo me habría gustado que tuviera soporte para mi principal editor de código.
-    \item En los \textbf{primeros 4 meses}, la extensión ha sido \textbf{instalada más de 600 veces}, y ha recibido una \textbf{valoración de 5 estrellas} (sobre 5).
-\end{itemize}
-
-\subsection{Otros proyectos}
-
-\begin{itemize}
-    \item \textbf{London Eye} (\href{https://github.com/algono/London-Eye}{repositorio}): Videojuego hecho en \textbf{Unity} con \textbf{C\#} en 3 semanas para la asignatura \emph{EDV}. En este juego mejoré el sistema de diálogos que hice para \emph{Frozen Out}.
-    \item \textbf{Acceso UPV} (\href{https://github.com/algono/AccesoUPV}{repositorio}): Aplicación de escritorio para Windows, diseñada para acceder fácilmente a varios servicios de la UPV (VPN, Disco W, etc). Hecha en \textbf{C\#} con \textbf{WPF}.
-\end{itemize}
-
-\section{Educación}
-
-\subsection{Universidad}
-
-{\uni}
-
-Grado en Ingeniería Informática, 2021
-
-Mención en Ingeniería del Software
 
 \subsection{Campus Científicos - 2015}
 
