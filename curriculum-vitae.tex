@@ -25,6 +25,16 @@
 
 \usepackage[english,spanish]{babel}
 
+\usepackage{titlesec}
+
+% section format
+
+\titleformat*{\section}{\LARGE\bfseries}
+\titleformat*{\subsection}{\Large\bfseries}
+\titleformat*{\subsubsection}{\large\bfseries}
+\titleformat*{\paragraph}{\large\bfseries}
+\titleformat*{\subparagraph}{\large\bfseries}
+
 % Setup color links
 \hypersetup{
     urlcolor=Blue
@@ -156,7 +166,7 @@
 
 \rule{.9\textwidth}{.4pt}
 
-\section{Conocimientos}
+\section*{Conocimientos}
 
 \vspace{.8em}
 
@@ -256,25 +266,46 @@
 
 \pagebreak
 
-\section{Experiencia}
+\section*{Experiencia}
 
-\subsection{Técnico medio | ITACA-SABIEN (UPV) | 2022 - presente}
+\subsection*{2022 - presente | Técnico medio | ITACA-SABIEN (UPV)}
 
-Como \textbf{técnico medio en informática} en el grupo \emph{\textbf{\href{\sabienUrl}{SABIEN}} (Innovaciones Tecnológicas para la Salud y el Bienestar)} del \emph{Instituto de Aplicaciones de las Tecnologías de la Información y de las Comunicaciones Avanzadas (\textbf{\href{http://www.itaca.upv.es/}{ITACA}})} de la \emph{{\uniFull} (\textbf{\href{\uniUrl}{UPV}})}, mi trabajo consiste en el desarrollo de aplicaciones y el apoyo informático de distinta índole en el marco de diversos proyectos de investigación.
+Como \textbf{técnico medio en informática} en el grupo \emph{\textbf{\href{\sabienUrl}{SABIEN}} (Innovaciones Tecnológicas para la Salud y el Bienestar)} del \emph{Instituto de Aplicaciones de las Tecnologías de la Información y de las Comunicaciones Avanzadas (\textbf{\href{http://www.itaca.upv.es/}{ITACA}})} de la \emph{{\uniFull} (\textbf{\href{\uniUrl}{UPV}})}, mi trabajo consiste en el \textbf{desarrollo de aplicaciones} y el \textbf{apoyo informático} de distinta índole en el marco de diversos \textbf{proyectos de investigación}.
 
-\subsubsection{Proyectos en los que he participado}
+\subsubsection*{Proyectos en los que he participado}
+
+\vspace{1em}
 
 \begin{itemize}
-    \item \textbf{\href{https://orriolsarrandeterra.com/}{Orriols Arran de Terra}}: Página web destinada a la difusión de noticias y actividades del barrio de Els Orriols (Valencia)
-    \item \textbf{\href{https://www.sabien.upv.es/project/value/}{VALUE}}: Uso de técnicas de \emph{Process Mining} (minería de procesos) para la mejora de la eficiencia en la gestión de la información en el sector de la salud
-    \item \textbf{\href{http://www.sabien.upv.es/project/dial/}{DIAL}}: Tecnologías Asistivas de Voz Multiplataforma para la detección y abordaje de Soledad No Deseada en personas mayores
+    \item {\large\textbf{\href{https://orriolsarrandeterra.com/}{Orriols Arran de Terra}}} (2022)
+          \begin{itemize}
+              \item \textbf{Página web} destinada a la difusión de noticias y actividades del barrio de Els Orriols (Valencia)
+              \item Desarrollé la web con \textbf{WordPress} y \textbf{Elementor}
+              \item Para implementar algunas funcionalidades personalizadas, creé \textbf{plugins} con \textbf{PHP}
+              \item Además utilicé \textbf{HTML}, \textbf{CSS} y \textbf{JavaScript}
+          \end{itemize}
+    \item {\large\textbf{\href{https://www.sabien.upv.es/project/value/}{VALUE}}} (2022 - presente)
+          \begin{itemize}
+              \item Uso de técnicas de \textbf{\emph{Process Mining}} (minería de procesos) para la mejora de la eficiencia en la gestión de la información en el sector de la salud
+              \item He participado en el desarrollo de la \textbf{aplicación de escritorio} <<\textbf{\emph{PMApp}}>>, la cual ejecuta algoritmos de \textbf{\emph{process mining}} para tratar y visualizar diferentes datos
+              \item Dicha app está desarrollada en \textbf{C\#} con \textbf{WPF} para la interfaz gráfica
+              \item He mejorado el sistema de visualización de tablas e histogramas, he añadido soporte para el uso de \emph{proxies}\dots
+          \end{itemize}
+    \item {\large\textbf{\href{http://www.sabien.upv.es/project/dial/}{DIAL}}} (2022 - presente)
+          \begin{itemize}
+              \item \textbf{Asistente de voz} para la detección y abordaje de Soledad No Deseada en personas mayores
+              \item Este asistente se basa en el sistema de código abierto (\emph{open source}) \textbf{\href{https://mycroft.ai/}{Mycroft}}, y utiliza \textbf{Python} para el desarrollo de \textbf{\emph{skills}} (funcionalidades)
+              \item Mi aportación principal ha sido el entrenamiento de un modelo de \textbf{\emph{machine learning}} con la herramienta \textbf{\emph{Precise}} (creada por Mycroft) para utilizar la frase <<\emph{Hola dial}>> como palabra de activación del asistente
+              \item Además, he configurado alrededor de 30 dispositivos \textbf{Raspberry Pi} para que funcionen como asistentes de voz
+              \item Este conocimiento me ha servido para \textbf{configurar} otras \textbf{Raspberry Pi} y realizar \textbf{instalaciones en casas de pacientes} para el \textbf{proyecto europeo} \textbf{\href{http://www.sabien.upv.es/project/lifechamps/}{Lifechamps}} (2022 - presente)
+          \end{itemize}
 \end{itemize}
 
 \pagebreak
 
-\section{Educación}
+\section*{Educación}
 
-\subsection{Universidad}
+\subsection*{Universidad}
 
 \fbox{
     \large
@@ -287,7 +318,7 @@ Como \textbf{técnico medio en informática} en el grupo \emph{\textbf{\href{\sa
     \end{minipage}
 }
 
-\subsubsection{Proyectos de asignaturas}
+\subsubsection*{Proyectos de asignaturas}
 
 \begin{itemize}
     \item \textbf{Al Loro} (\href{https://github.com/algono/FeedTheParrot-RSS}{Repositorio}) (\href{http://hdl.handle.net/10251/174256}{Memoria}):
@@ -305,11 +336,11 @@ Como \textbf{técnico medio en informática} en el grupo \emph{\textbf{\href{\sa
           \end{itemize}
 \end{itemize}
 
-\subsection{Campus Científicos - 2015}
+\subsection*{Campus Científicos - 2015}
 
 Durante el verano de 2015, participé en los \href{https://www.campuscientificos.es/}{Campus Científicos} (organizados por la FECYT y el ministerio de Educación), cursando el proyecto de ``Seguridad en Redes e Internet'' en la universidad Carlos III de Madrid.
 
-\section{Idiomas}
+\section*{Idiomas}
 
 \begin{itemize}
     \item \textbf{Español}, nativo
@@ -317,13 +348,13 @@ Durante el verano de 2015, participé en los \href{https://www.campuscientificos
     \item Valenciano, nivel B1
 \end{itemize}
 
-\section{Actividades}
+\section*{Actividades}
 
-\subsection{Mentor - Technovation Challenge}
+\subsection*{Mentor - Technovation Challenge}
 
 Participé como mentor voluntario en el concurso de Iridescent \href{https://technovationchallenge.org/}{Technovation Challenge} en su edición del año 2019, en colaboración con el \href{https://cdl.upv.es/american-space}{American Space}, una asociación de la \emph{\uni}.
 
-\section{Otros}
+\section*{Otros}
 
 \begin{itemize}
     \item Carnet de conducir (tipo B).
