@@ -23,7 +23,7 @@
 
 \usepackage{qrcode}
 
-\usepackage[english,spanish]{babel}
+\usepackage[spanish,english]{babel}
 
 \usepackage{titlesec}
 
@@ -73,7 +73,7 @@
 \newcommand{\iconoGitLab}{\faGitlab}
 \newcommand{\iconoLinkedin}{\faLinkedin}
 
-\newcommand{\linkToSelfShort}{bit.ly/3FT3cVY}
+\newcommand{\linkToSelfShort}{bit.ly/463OXvZ}
 \newcommand{\linkToSelf}{https://\linkToSelfShort}
 
 \newcommand{\contactinfo}{
@@ -87,7 +87,7 @@
         \begin{large}
             \iconoEmail \hspace{.5em} \email \par
             \vspace{12pt}
-            \iconoDireccion \hspace{.5em} Mislata, Valencia \par
+            \iconoDireccion \hspace{.5em} Mislata, Valencia, Spain \par
             \vspace{12pt}
             \iconoLinkedin \hspace{.5em} \linkedinpage \par
             \vspace{12pt}
@@ -105,53 +105,19 @@
         }
     \end{minipage}
     \begin{center}
-    Alejandro Gómez es un \textbf{Ingeniero Informático}\\ especializado en \textbf{Ingeniería del Software},\\actualmente \textbf{trabajando} en el grupo de investigación \textbf{\href{\sabienUrl}{ITACA-SABIEN}}\\ de la \textbf{\href{\uniUrl}{\uni}}.
+    Alejandro Gómez is a \textbf{Software engineer},\\currently \textbf{working} at the \textbf{\href{\sabienUrl}{ITACA-SABIEN}} research group\\ from the \textbf{\href{\uniUrl}{\uni}}.
     \end{center}
 }
 
 % Other info
 \newcommand{\uni}{{\uniFull} ({\uniShort})}
-\newcommand{\uniFull}{Universitat Politècnica de València}
+\newcommand{\uniFull}{Polytechnic University of Valencia}
 \newcommand{\uniShort}{UPV}
 \newcommand{\uniUrl}{https://www.upv.es/es}
 
 \newcommand{\sabienUrl}{http://www.sabien.upv.es/}
 
 \newcommand{\fce}{\emph{First Certificate in English - Grade A - Cambridge English Level 2}}
-
-% My Grades
-
-\newcommand{\grade}[1]{Nota media: #1}
-\newcommand{\mh}[1]{Matrículas de honor: #1}
-
-% https://tex.stackexchange.com/questions/150492/how-to-use-itemize-in-table-environment
-\newcommand{\tabitem}{~~\llap{\textbullet}~~}
-
-\newcommand{\unigrades}[9]{
-    \begin{tabular}{|ll<{\hspace{1em}}|>{\hspace{1em}}ll|}
-        \hline
-        \multicolumn{4}{|c|}{\textbf{Expediente}}\\[.5em]
-        1er curso: & \tabitem \grade{#1} & 3er curso: & \tabitem \grade{#5} \\
-        & \tabitem \mh{#2} && \tabitem \mh{#6} \\
-        2{\textdegree} curso: & \tabitem \grade{#3} & 4{\textdegree} curso: & \tabitem \grade{#7} \\
-        & \tabitem \mh{#4} && \tabitem \mh{#8} \\
-        \multicolumn{4}{|c|}{\rule{0pt}{1.5em}Nota final (TFG): #9}\\
-        \hline
-    \end{tabular}
-}
-
-\newcommand{\myunigrades}{
-    \unigrades
-    {8,3}
-    {4}
-    {8,1}
-    {1}
-    {8,3}
-    {2}
-    {8,4}
-    {2}
-    {9 (Excelente)}
-}
 
 \begin{document}
 
@@ -166,7 +132,7 @@
 
 \rule{.9\textwidth}{.4pt}
 
-\section*{Conocimientos}
+\section*{Knowledge}
 
 \vspace{.8em}
 
@@ -227,13 +193,13 @@
         }
 
         % Draw the categories
-        \node[category-smaller] (db) at (1.1,-2.5) {Bases de datos};
-        \node[category-smaller, text width=2.5cm, text depth=3cm] (vcs) at (6.8,-0.25) {Control de versiones};
-        \node[category-small] (tools) at (5.9,-4.5) {Herramientas};
+        \node[category-smaller] (db) at (1.1,-2.5) {Databases};
+        \node[category-smaller, text width=2.5cm, text depth=3cm] (vcs) at (6.8,-0.25) {Version control};
+        \node[category-small] (tools) at (5.9,-4.5) {Tools};
         \node[subcategory] (dotnet) at (-0.5,2.5) {\includesvg[scale=2]{csharp.svg}};
-        \node[category] (web) at (-5,1) {Desarrollo Web};
-        \node[category-smaller, align=center, text depth=1.5cm] (mobile) at (5,3.5) {Móvil};
-        \node[category-small, align=right, text depth=0] (desktop) at (2,2) {\colorbox{white}{Escritorio}};
+        \node[category] (web) at (-5,1) {Web development};
+        \node[category-smaller, align=center, text depth=1.5cm] (mobile) at (5,3.5) {Mobile};
+        \node[category-small, align=right, text depth=0] (desktop) at (2,2) {\colorbox{white}{Desktop}};
 
         % Draw the skills within the categories
         \node[skill] (html) at (-8.3,2.5) {{\fontsize{30pt}{30pt}\faHtml5}\\\textbf{HTML}};
@@ -266,98 +232,96 @@
 
 \pagebreak
 
-\section*{Experiencia}
+\section*{Experience}
 
-\subsection*{2022 - presente | Técnico medio | ITACA-SABIEN (UPV)}
+\subsection*{2022 - present | mid-level software engineer | ITACA-SABIEN (UPV)}
 
-Como \textbf{técnico medio en informática} en el grupo \emph{\textbf{\href{\sabienUrl}{SABIEN}} (Innovaciones Tecnológicas para la Salud y el Bienestar)} del \emph{Instituto de Aplicaciones de las Tecnologías de la Información y de las Comunicaciones Avanzadas (\textbf{\href{http://www.itaca.upv.es/}{ITACA}})} de la \emph{{\uniFull} (\textbf{\href{\uniUrl}{UPV}})}, mi trabajo consiste en el \textbf{desarrollo de aplicaciones} y el \textbf{apoyo informático} de distinta índole en el marco de diversos \textbf{proyectos de investigación}.
+As a \textbf{mid-level software engineer} at the \emph{\textbf{\href{\sabienUrl}{SABIEN}} (Technological innovations for Health and Wellbeing)} group from the \emph{Institute of Applied Information Technologies and Advanced Communications (\textbf{\href{http://www.itaca.upv.es/}{ITACA}})}, which is part of the \emph{{\uniFull} (\textbf{\href{\uniUrl}{UPV}})}, my work consists on \textbf{developing applications} and providing \textbf{technical support} in various ways in the context of several \textbf{research projects}.
 
-\subsubsection*{Proyectos en los que he participado}
+\subsubsection*{Projects I have participated in}
 
 \vspace{1em}
 
 \begin{itemize}
     \item {\large\textbf{\href{https://orriolsarrandeterra.com/}{Orriols Arran de Terra}}} (2022)
           \begin{itemize}
-              \item \textbf{Página web} destinada a la difusión de noticias y actividades del barrio de \emph{Els Orriols} (Valencia)
-              \item Desarrollé la web con \textbf{WordPress} y \textbf{Elementor}
-              \item Para implementar algunas funcionalidades personalizadas, creé \textbf{plugins} con \textbf{PHP}
-              \item Además utilicé \textbf{HTML}, \textbf{CSS} y \textbf{JavaScript}
+              \item \textbf{Website} intended for broadcasting news and local activities from the \emph{Els Orriols} neighborhood in Valencia
+              \item I developed said website using \textbf{WordPress} and \textbf{Elementor}
+              \item In order to create some custom features, I built \textbf{plugins} with \textbf{PHP}
+              \item I also used \textbf{HTML}, \textbf{CSS} y \textbf{JavaScript}
           \end{itemize}
-    \item {\large\textbf{\href{https://www.sabien.upv.es/project/value/}{VALUE}}} (2022 - presente)
+    \item {\large\textbf{\href{https://www.sabien.upv.es/project/value/}{VALUE}}} (2022 - present)
           \begin{itemize}
-              \item Uso de técnicas de \textbf{\emph{Process Mining}} (minería de procesos) para la mejora de la eficiencia en la gestión de la información en el sector de la salud
-              \item He desarrollado varias funcionalidades para la \textbf{aplicación de escritorio} <<\textbf{\emph{PMApp}}>>, la cual ejecuta algoritmos de \textbf{\emph{process mining}} para tratar y visualizar diferentes datos
-              \item Dicha app está desarrollada en \textbf{C\#} con \textbf{WPF} para la interfaz gráfica
-              \item He mejorado el sistema de visualización de tablas e histogramas, he añadido soporte para el uso de \emph{proxies}\dots
+              \item Usage of \textbf{\emph{Process Mining}} techniques for improving efficiency on the management of information in the health sector
+              \item I developed several features for the ``\textbf{\emph{PMApp}}'' \textbf{desktop application}, which runs \textbf{\emph{process mining}} algorithms for treating and visualizing different kinds of data
+              \item Said app is developed in \textbf{C\#}, and uses \textbf{WPF} for the user interface
+              \item I have improved the visualization system for tables and histograms, I have added support for using \emph{proxies}\dots
           \end{itemize}
-    \item {\large\textbf{\href{http://www.sabien.upv.es/project/dial/}{DIAL}}} (2022 - presente)
+    \item {\large\textbf{\href{http://www.sabien.upv.es/project/dial/}{DIAL}}} (2022 - present)
           \begin{itemize}
-              \item \textbf{Asistente de voz} para la detección y abordaje de Soledad No Deseada en personas mayores
-              \item Este asistente se basa en el sistema de código abierto (\emph{open source}) \textbf{\href{https://mycroft.ai/}{Mycroft}}, y utiliza \textbf{Python} para el desarrollo de \textbf{\emph{skills}} (funcionalidades)
-              \item Mi aportación principal ha sido el entrenamiento de un modelo de \textbf{\emph{machine learning}} con la herramienta \textbf{\emph{Precise}} (creada por Mycroft) para utilizar la frase <<\emph{Hola dial}>> como palabra de activación del asistente
-              \item Además, he \textbf{configurado} más de 20 dispositivos \textbf{Raspberry Pi} para que funcionen como asistentes de voz mediante el sistema de DIAL
-              \item Este conocimiento me ha servido para \textbf{configurar} otras \textbf{Raspberry Pi} y realizar \textbf{instalaciones en casas de pacientes} para el \textbf{proyecto europeo} \textbf{\href{http://www.sabien.upv.es/project/lifechamps/}{Lifechamps}} (2022 - presente)
+              \item \textbf{Voice assistant} for the detection and addressing of Unwanted Loneliness in older adults.
+              \item This assistant is based on the \emph{open source} \textbf{\href{https://mycroft.ai/}{Mycroft}} system, and uses \textbf{Python} for developing \textbf{\emph{skills}}
+              \item My main contribution has been training a \textbf{\emph{machine learning}} model with the \textbf{\emph{Precise}} tool (created by Mycroft) so people can use the phrase ``\emph{Hola dial}'' as a wake word for the assistant
+              \item On top of that, I have \textbf{configured} over 20 \textbf{Raspberry Pi} devices so they function as voice assistants by means of the DIAL system
+              \item This knowledge has been useful for \textbf{configuring} additional \textbf{Raspberry Pi} devices and carrying out \textbf{installations in patients' houses} for the \textbf{\href{http://www.sabien.upv.es/project/lifechamps/}{Lifechamps}} (2022 - present) \textbf{European project}
           \end{itemize}
 \end{itemize}
 
-\pagebreak
+\section*{Education}
 
-\section*{Educación}
-
-\subsection*{Universidad}
+\subsection*{University}
 
 \fbox{
     \large
     \begin{minipage}{.6\textwidth}
-        Grado en Ingeniería Informática
+        Computer Science degree
 
-        Mención en Ingeniería del Software
+        Mention in Software Engineering
 
             {\uni}, 2021
     \end{minipage}
 }
 
-\subsubsection*{Proyectos de asignaturas}
+\subsubsection*{Projects for subjects}
 
 \begin{itemize}
     \item \textbf{Al Loro} (\href{https://github.com/algono/FeedTheParrot-RSS}{Repositorio}) (\href{http://hdl.handle.net/10251/174256}{Memoria}):
           \begin{itemize}
-              \item Implementé en solitario una \textbf{skill} para Amazon \textbf{Alexa} como Trabajo de Fin de Grado (\textbf{TFG}), usando \textbf{Node.js} y \textbf{TypeScript}
-              \item Integré la skill con una \textbf{base de datos} en \textbf{Firebase}, creando además una app con \textbf{Flutter} para gestionar las preferencias del usuario
-              \item Diseñé un sistema de autenticación usando servicios de \textbf{AWS} como \textbf{Lambda}, \textbf{DynamoDB} o \textbf{API Gateway}
+              \item I implemented by myself an Amazon \textbf{Alexa} \textbf{skill} for my \textbf{final degree project}, using \textbf{Node.js} and \textbf{TypeScript}.
+              \item I integrated said skill with a \textbf{database} hosted in \textbf{Firebase}, on top of creating a mobile app using \textbf{Flutter} to manage user preferences
+              \item I designed an authentication system using several \textbf{AWS} services; such as \textbf{Lambda}, \textbf{DynamoDB} or \textbf{API Gateway}
           \end{itemize}
     \item \textbf{Frozen Out} (\href{https://github.com/Freezer-Games/Frozen-Out}{Repositorio}):
           \begin{itemize}
-              \item Participé en el desarrollo de un videojuego hecho en \textbf{Unity} con \textbf{C\#} como proyecto para la asignatura \emph{IPV} (2019)
-              \item Diseñé un \textbf{sistema de diálogos} con soporte para formatos como negrita, cursiva, y distintos colores apoyándome en la librería \href{https://yarnspinner.dev/}{\textbf{\emph{YarnSpinner}}}
-              \item El proyecto participó en la \href{https://es-es.facebook.com/etsinf/videos/feria-de-proyectos-de-estudiantes-2019/1921312964681641/}{\textbf{Feria de proyectos} (2019)} que organizó la \emph{ETSINF}
-              \item El proyecto continuó sin mí tras la entrega final de la asignatura (Enero de 2020). En Febrero de 2021, \emph{Frozen Out} recibió el \textbf{Premio Especial Compromiso PlayStation} (\href{https://www.inf.upv.es/www/etsinf/es/premio-especial-compromiso-playstation-para-el-videojuego-frozen-out-creado-por-estudiantes-de-la-etsinf-y-la-facultat-de-bb-aa/}{artículo})
+              \item I was part of the development team for a video game made in \textbf{Unity} with \textbf{C\#} as a project for the ``\emph{IPV}'' subject (2019)
+              \item I designed a \textbf{dialog system} with support for using formats such as bold, italics, and different colors by working on top of the \href{https://yarnspinner.dev/}{\textbf{\emph{YarnSpinner}}} library
+              \item This project was part of the \href{https://es-es.facebook.com/etsinf/videos/feria-de-proyectos-de-estudiantes-2019/1921312964681641/}{\textbf{Project fair} (2019)} organized by the \emph{ETSINF} (computer science school at the \emph{UPV})
+              \item The project carried on without me after the final submission for the subject (January 2020). In February of 2021, \emph{Frozen Out} won the \textbf{PlayStation Commitment Special Award} (\href{https://www.inf.upv.es/www/etsinf/es/premio-especial-compromiso-playstation-para-el-videojuego-frozen-out-creado-por-estudiantes-de-la-etsinf-y-la-facultat-de-bb-aa/}{article in Spanish})
           \end{itemize}
 \end{itemize}
 
-\subsection*{Campus Científicos de Verano - 2015}
+\subsection*{Scientific Summer School - 2015}
 
-Durante el verano de 2015, participé en los \href{https://www.fecyt.es/es/tematica/campus-cientificos-de-verano}{Campus Científicos de Verano} (organizados por la \href{https://www.fecyt.es/es}{FECYT} y el ministerio de Educación), cursando el proyecto de ``Seguridad en Redes e Internet'' en la universidad Carlos III de Madrid.
+During the summer of 2015, I participated in a scientific summer school (called ``\href{https://www.fecyt.es/en/tematica/campus-cientificos-de-verano}{Campus Científicos de Verano}'' in Spanish) (organized by the \href{https://www.fecyt.es/en}{Spanish foundation for science and technology (FECYT)} and the Spanish Ministry of Education), specifically in the ``Network and Internet Security'' project that took place at the Carlos III university in Madrid.
 
-\section*{Idiomas}
+\section*{Languages}
 
 \begin{itemize}
-    \item \textbf{Español}, nativo
-    \item \textbf{Inglés}, nivel \textbf{C1} (\fce)
-    \item Valenciano, nivel B1
+    \item \textbf{Spanish}, native
+    \item \textbf{English}, \textbf{C1} level (\fce)
+    \item Catalan (Valencia), B1 level
 \end{itemize}
 
-\section*{Actividades}
+\section*{Activities}
 
 \subsection*{Mentor - Technovation Challenge}
 
-Participé como mentor voluntario en el concurso de Iridescent \href{https://technovationchallenge.org/}{Technovation Challenge} en su edición del año 2019, en colaboración con \href{https://cdl.upv.es/american-space}{American Space}, una asociación de la \emph{\uni}.
+I participated as a volunteer mentor for the \href{https://technovationchallenge.org/}{Technovation Challenge} contest organized by Iridescent in its 2019 edition, in collaboration with \href{https://cdl.upv.es/american-space}{American Space}, an association from the \emph{\uni}.
 
-\section*{Otros}
+\section*{Others}
 
 \begin{itemize}
-    \item Carnet de conducir
+    \item Driving license
 \end{itemize}
 
 \end{document}
